@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple web service
+After=local-fs.target
+
+[Service]
+ExecStart=/usr/local/bin/simple_web.sh
+StandardOutput=inherit
+KillMode=process
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
