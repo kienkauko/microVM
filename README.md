@@ -117,3 +117,5 @@ Everything is done, just boost up your MicroVM and test if everything works as i
 `sudo firecracker --config-file vm_config.json`
 
 If you encounter the error /dev/root: Can't open blockdev while booting then probably it is the [ACPI bug](https://github.com/firecracker-microvm/firecracker/issues/4881) I have mentiond above. Try to compile lower version Kernel with lower version Firecracker.
+
+If you encounter the error `Failed to open the API socket at: /run/firecracker.socket. Check that it is not already used.` when running the ``sudo firecracker ...` cmd then please remove the socket by `sudo rm -f /run/firecracker.socket`
